@@ -111,8 +111,7 @@ final class Plugin implements Registerable {
 	 */
 	private function get_services() {
 		return [
-			CustomPostType\Contact::class,
-			CustomPostType\Reminder::class,
+			CustomPostType\Idea::class,
 		];
 	}
 }

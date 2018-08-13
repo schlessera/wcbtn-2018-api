@@ -9,6 +9,7 @@
 
 namespace WordCampBrighton\API\CustomPostType;
 
+use WordCampBrighton\API\CustomField\CustomField;
 use WordCampBrighton\API\Service;
 
 /**
@@ -24,6 +25,10 @@ abstract class BaseCustomPostType implements Service {
 	public function register() {
 		add_action( 'init', function () {
 			register_post_type( $this->get_slug(), $this->get_arguments() );
+
+			foreach ( $this->get_custom_fields() as $custom_field ) {
+				$custom_field->register();
+			}
 		} );
 	}
 
@@ -40,4 +45,11 @@ abstract class BaseCustomPostType implements Service {
 	 * @return array Array of arguments.
 	 */
 	abstract protected function get_arguments();
+
+	/**
+	 * Get the custom fields to add to a response.
+	 *
+	 * @return CustomField[] Array of custom field schema.
+	 */
+	abstract protected function get_custom_fields();
 }
