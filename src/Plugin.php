@@ -111,6 +111,7 @@ final class Plugin implements Registerable {
 	 */
 	private function get_services() {
 		return [
+			Authentication\JavaScriptWebToken::class,
 			CustomPostType\Idea::class,
 		];
 	}

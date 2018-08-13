@@ -19,7 +19,7 @@ final class ReminderDate extends BaseCustomField {
 	 * @return string Name of the custom field.
 	 */
 	protected function get_name() {
-		return 'reminder_date';
+		return '_reminder_date';
 	}
 
 	/**

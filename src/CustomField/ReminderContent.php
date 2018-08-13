@@ -19,7 +19,7 @@ final class ReminderContent extends BaseCustomField {
 	 * @return string Name of the custom field.
 	 */
 	protected function get_name() {
-		return 'reminder_content';
+		return '_reminder_content';
 	}
 
 	/**
