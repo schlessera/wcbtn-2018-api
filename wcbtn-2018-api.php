@@ -30,6 +30,16 @@ require_once __DIR__ . '/src/Autoloader.php';
 	->add_namespace( __NAMESPACE__, __DIR__ . '/src' )
 	->register();
 
+// Register activation and deactivation hooks.
+register_activation_hook( __FILE__, function () {
+	PluginFactory::create()
+             ->activate();
+} );
+register_deactivation_hook( __FILE__, function () {
+	PluginFactory::create()
+             ->deactivate();
+} );
+
 // Hook plugin into WordPress request lifecycle.
 PluginFactory::create()
              ->register();

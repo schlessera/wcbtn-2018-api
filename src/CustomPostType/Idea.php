@@ -66,7 +66,7 @@ final class Idea extends BaseCustomPostType {
 			'has_archive'         => true,
 			'exclude_from_search' => false,
 			'publicly_queryable'  => true,
-			'capability_type'     => 'post',
+			'capability_type'     => 'idea',
 			'show_in_rest'        => true,
 			'rest_base'           => $this->get_slug() . 's',
 		];

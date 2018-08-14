@@ -20,7 +20,7 @@ use WordCampBrighton\API\Assets\AssetsHandler;
  *
  * @package schlessera/wcbtn-2018-api
  */
-final class Plugin implements Registerable {
+final class Plugin implements Registerable, HasActivation, HasDeactivation {
 
 	/**
 	 * Assets handler instance.
@@ -30,6 +30,13 @@ final class Plugin implements Registerable {
 	private $assets_handler;
 
 	/**
+	 * Array of instantiated services.
+	 *
+	 * @var Service[]
+	 */
+	private $services = [];
+
+	/**
 	 * Instantiate a Plugin object.
 	 *
 	 * @param AssetsHandler|null $assets_handler Optional. Instance of the
@@ -37,6 +44,38 @@ final class Plugin implements Registerable {
 	 */
 	public function __construct( AssetsHandler $assets_handler = null ) {
 		$this->assets_handler = $assets_handler ?: new AssetsHandler();
+	}
+
+	/**
+	 * Activate the plugin.
+	 */
+	public function activate() {
+		$this->register_services();
+
+		// Activate that which can be activated.
+		foreach ( $this->services as $service ) {
+			if ( $service instanceof HasActivation ) {
+				$service->activate();
+			}
+		}
+
+		flush_rewrite_rules();
+	}
+
+	/**
+	 * Deactivate the plugin.
+	 */
+	public function deactivate() {
+		$this->register_services();
+
+		// Deactivate that which can be deactivated.
+		foreach ( $this->services as $service ) {
+			if ( $service instanceof HasDeactivation ) {
+				$service->deactivate();
+			}
+		}
+
+		flush_rewrite_rules();
 	}
 
 	/**
@@ -55,9 +94,19 @@ final class Plugin implements Registerable {
 	 * @throws Exception\InvalidService If a service is not valid.
 	 */
 	public function register_services() {
-		$services = $this->get_services();
-		$services = array_map( [ $this, 'instantiate_service' ], $services );
-		array_walk( $services, function ( Service $service ) {
+		// Bail early so we don't instantiate services twice.
+		if ( ! empty( $this->services ) ) {
+			return;
+		}
+
+		$classes = $this->get_service_classes();
+
+		$this->services = array_map(
+			[ $this, 'instantiate_service' ],
+			$classes
+		);
+
+		array_walk( $this->services, function ( Service $service ) {
 			$service->register();
 		} );
 	}
@@ -109,9 +158,10 @@ final class Plugin implements Registerable {
 	 *
 	 * @return array<string> Array of fully qualified class names.
 	 */
-	private function get_services() {
+	private function get_service_classes() {
 		return [
 			Authentication\JavaScriptWebToken::class,
+			Authorisation\IdeaManagerRole::class,
 			CustomPostType\Idea::class,
 			Metabox\Idea::class,
 		];
