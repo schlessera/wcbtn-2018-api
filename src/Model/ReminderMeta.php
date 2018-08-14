@@ -31,5 +31,5 @@ interface ReminderMeta {
 	const FORM_FIELD_DATE_HH = self::FORM_FIELD_PREFIX . 'hh';
 	const FORM_FIELD_DATE_MN = self::FORM_FIELD_PREFIX . 'mn';
 
-	const META_PREFIX = '_reminder_';
+	const META_PREFIX = 'reminder_';
 }
