@@ -26,13 +26,23 @@ final class JavaScriptWebToken implements Service {
 	 * @return void
 	 */
 	public function register() {
-		if ( defined( self::TOKEN_VARIABLE ) ) {
-			return;
+		if ( ! defined( self::TOKEN_VARIABLE ) ) {
+			define(
+				self::TOKEN_VARIABLE,
+				getenv( self::TOKEN_VARIABLE )
+			);
 		}
 
-		define(
-			self::TOKEN_VARIABLE,
-			getenv( self::TOKEN_VARIABLE )
+		add_filter(
+			'jwt_auth_token_before_dispatch',
+			function ( $data, $user ) {
+				// We want to have the user ID available to the app.
+				$data['user_id'] = $user->data->ID;
+
+				return $data;
+			},
+			10,
+			2
 		);
 	}
 }
