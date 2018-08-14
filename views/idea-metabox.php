@@ -7,5 +7,10 @@
  * @link    https://schlessera.github.io/wcbtn-2018
  */
 
-namespace WordCampBrighton\API\Controller;
+namespace WordCampBrighton\API;
 
+?>
+<form class="idea-cpt-metabox">
+	<?= $this->nonce_field ?>
+	<?= $this->render_partial( 'views/idea-metabox-reminder' ) ?>
+</form>

@@ -9,26 +9,25 @@
 
 namespace WordCampBrighton\API\Model;
 
-use WordCampBrighton\API\CustomPostType\Contact as ContactCPT;
-use WP_Query;
+use WordCampBrighton\API\CustomPostType\Idea as IdeaCPT;
 use WP_Post;
 
 /**
- * Class ContactRepository.
+ * Class IdeaRepository.
  *
  * @package schlessera/wcbtn-2018-api
  */
-final class ContactRepository extends CustomPostTypeRepository {
+final class IdeaRepository extends CustomPostTypeRepository {
 
 	/**
-	 * Create Reminder instance from WP_Post object.
+	 * Create Idea instance from WP_Post object.
 	 *
 	 * @param WP_Post $post Post object.
 	 *
-	 * @return Contact
+	 * @return Idea
 	 */
 	public function from_post_object( $post ) {
-		return new Contact( $post );
+		return new Idea( $post );
 	}
 
 	/**
@@ -40,10 +39,10 @@ final class ContactRepository extends CustomPostTypeRepository {
 	 */
 	public function get_find_latest_query_args( $limit = 3 ) {
 		return [
-			'post_type'      => ContactCPT::SLUG,
+			'post_type'      => IdeaCPT::SLUG,
 			'post_status'    => 'publish',
 			'posts_per_page' => $limit,
-			'meta_key'       => ContactMeta::META_PREFIX . ContactMeta::INTRO_WHEN,
+			'meta_key'       => ReminderMeta::META_PREFIX . ReminderMeta::DATE,
 			'orderby'        => 'meta_value_num',
 			'order'          => 'DESC',
 		];

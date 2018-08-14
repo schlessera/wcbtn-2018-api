@@ -45,7 +45,7 @@ abstract class CustomPostTypeRepository {
 	 * @return array<CustomPostTypeEntity>
 	 */
 	public function find_latest( $limit = 3 ) {
-		$query = new WP_Query( $this->get_find_latest_query( $limit ) );
+		$query = new WP_Query( $this->get_find_latest_query_args( $limit ) );
 
 		$elements = [];
 		foreach ( $query->posts as $post ) {

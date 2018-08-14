@@ -10,21 +10,26 @@
 namespace WordCampBrighton\API\Model;
 
 /**
- * Class ReminderMeta.
+ * Interface ReminderMeta.
  *
  * @package schlessera/wcbtn-2018-api
  */
 interface ReminderMeta {
 
-	const CONTACT = 'contact';
-	const WHEN    = 'when';
-	const HOW     = 'how';
+	const DATE    = 'date';
+	const CONTENT = 'content';
 
 	const PROPERTIES = [
-		self::CONTACT,
-		self::WHEN,
-		self::HOW,
+		self::DATE,
+		self::CONTENT,
 	];
 
-	const META_PREFIX = 'reminder_cpt_meta_';
+	const FORM_FIELD_PREFIX  = 'idea_cpt_reminder_';
+	const FORM_FIELD_DATE_AA = self::FORM_FIELD_PREFIX . 'aa';
+	const FORM_FIELD_DATE_MM = self::FORM_FIELD_PREFIX . 'mm';
+	const FORM_FIELD_DATE_JJ = self::FORM_FIELD_PREFIX . 'jj';
+	const FORM_FIELD_DATE_HH = self::FORM_FIELD_PREFIX . 'hh';
+	const FORM_FIELD_DATE_MN = self::FORM_FIELD_PREFIX . 'mn';
+
+	const META_PREFIX = '_reminder_';
 }

@@ -113,6 +113,7 @@ final class Plugin implements Registerable {
 		return [
 			Authentication\JavaScriptWebToken::class,
 			CustomPostType\Idea::class,
+			Metabox\Idea::class,
 		];
 	}
 }

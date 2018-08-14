@@ -1,0 +1,70 @@
+/*
+ * WordCamp Brighton 2018 workshop plugin (wcbtn-2018-api).
+ *
+ * @package schlessera/wcbtn-2018-api
+ * @licence MIT
+ * @link    https://schlessera.github.io/wcbtn-2018
+ */
+
+#idea_cpt_metabox.postbox .inside {
+    margin: 0;
+    padding: 0;
+}
+
+.idea-cpt-reminder-actions {
+    padding: 10px;
+    margin: 0;
+    clear: both;
+    border-top: 1px solid #ddd;
+    background: #f5f5f5;
+}
+
+.idea-cpt-metabox-section {
+    margin: 0 10px;
+}
+
+.idea-cpt-metabox-section {
+    padding: 6px 0 8px;
+}
+
+.idea-cpt-metabox-section textarea {
+    width: 100%;
+    height: 150px;
+}
+
+#idea-cpt-reminder-content-display,
+#idea-cpt-reminder-date-display {
+    font-weight: 600;
+}
+
+#idea_cpt_reminder_aa,
+#idea_cpt_reminder_jj,
+#idea_cpt_reminder_hh,
+#idea_cpt_reminder_mn {
+	padding: 1px;
+	font-size: 12px;
+}
+
+#idea_cpt_reminder_jj {
+	width: 2em;
+}
+
+#idea_cpt_reminder_aa {
+	width: 3.4em;
+}
+
+#idea_cpt_reminder_mm {
+    height: 21px;
+    line-height: 14px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+#idea_cpt_reminder_hh {
+	width: 2em;
+}
+
+#idea_cpt_reminder_mn {
+	width: 2em;
+}

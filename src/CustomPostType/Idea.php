@@ -18,13 +18,15 @@ use WordCampBrighton\API\CustomField;
  */
 final class Idea extends BaseCustomPostType {
 
+	 const SLUG = 'idea';
+
 	/**
 	 * Get the slug to use for the custom post type.
 	 *
 	 * @return string Custom post type slug.
 	 */
 	protected function get_slug() {
-		return 'idea';
+		return self::SLUG;
 	}
 
 	/**
