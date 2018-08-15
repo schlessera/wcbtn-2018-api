@@ -163,7 +163,7 @@ final class Plugin implements Registerable, HasActivation, HasDeactivation {
 			Authentication\JavaScriptWebToken::class,
 			Authorisation\IdeaManagerRole::class,
 			CustomPostType\Idea::class,
-			Metabox\Idea::class,
+			Metabox\Reminder::class,
 		];
 	}
 }

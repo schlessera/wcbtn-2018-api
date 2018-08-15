@@ -15,14 +15,14 @@ use WordCampBrighton\API\CustomPostType\Idea as IdeaCPT;
 use WordCampBrighton\API\Model;
 
 /**
- * Idea metabox class.
+ * Reminder metabox class.
  *
  * @package schlessera/wcbtn-2018-api
  */
-final class Idea extends BaseMetabox {
+final class Reminder extends BaseMetabox {
 
-	const ID       = 'idea_cpt_metabox';
-	const VIEW_URI = 'views/idea-metabox';
+	const ID       = 'idea_cpt_reminder_metabox';
+	const VIEW_URI = 'views/reminder-metabox';
 
 	const CSS_HANDLE = 'idea-backend-css';
 	const CSS_URI    = 'assets/styles/idea-backend';

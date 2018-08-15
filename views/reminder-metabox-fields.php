@@ -85,7 +85,7 @@ $reminders_date_fields .= '</div>';
 	</div>
 
 	<div id="idea-cpt-no-reminder-actions" class="idea-cpt-reminder-actions hide-if-no-js">
-		<a href="#idea_cpt_reminder" class="add-idea-cpt-reminder"><span class="button-add"><?= __('Add', 'wcbtn-2018-api' ) ?></span> <span class="screen-reader-text">Add reminder</span></a>
+		<a href="#idea_cpt_reminder_metabox" class="add-idea-cpt-reminder"><span class="button-add"><?= __('Add', 'wcbtn-2018-api' ) ?></span> <span class="screen-reader-text">Add reminder</span></a>
 	</div>
 </div>
 <div id="idea_cpt_with_reminder" class="<?= $reminder_date === 0 ? 'hidden' : '' ?>">
@@ -105,11 +105,11 @@ $reminders_date_fields .= '</div>';
 	</div>
 
 	<div id="idea-cpt-with-reminder-actions-edit" class="idea-cpt-reminder-actions hide-if-no-js hidden">
-		<a href="#idea_cpt_reminder" class="save-idea-cpt-reminder hide-if-no-js button">OK</a>
-		<a href="#idea_cpt_reminder" class="cancel-idea-cpt-reminder hide-if-no-js button-cancel">Cancel</a>
+		<a href="#idea_cpt_reminder_metabox" class="save-idea-cpt-reminder hide-if-no-js button">OK</a>
+		<a href="#idea_cpt_reminder_metabox" class="cancel-idea-cpt-reminder hide-if-no-js button-cancel">Cancel</a>
 	</div>
 
 	<div id="idea-cpt-with-reminder-actions-display" class="idea-cpt-reminder-actions hide-if-no-js">
-		<a href="#idea_cpt_reminder" class="edit-idea-cpt-reminder hide-if-no-js button">Edit</a>
+		<a href="#idea_cpt_reminder_metabox" class="edit-idea-cpt-reminder hide-if-no-js button">Edit</a>
 	</div>
 </div>

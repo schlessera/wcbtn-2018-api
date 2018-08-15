@@ -10,7 +10,7 @@
 namespace WordCampBrighton\API;
 
 ?>
-<form class="idea-cpt-metabox">
+<form class="idea-cpt-reminder-metabox">
 	<?= $this->nonce_field ?>
-	<?= $this->render_partial( 'views/idea-metabox-reminder' ) ?>
+	<?= $this->render_partial( 'views/reminder-metabox-fields' ) ?>
 </form>
