@@ -162,6 +162,7 @@ final class Plugin implements Registerable, HasActivation, HasDeactivation {
 		return [
 			Authentication\JavaScriptWebToken::class,
 			Authorisation\IdeaManagerRole::class,
+			Authorisation\AdminAccess::class,
 			CustomPostType\Idea::class,
 			Metabox\Reminder::class,
 		];
