@@ -1,15 +1,4 @@
-**Ideation App**
-
-Product Requirements
-
-_Version 1.0.0_
-
-_Last Updated: 17 August 2018_
-
-
-## Document History
-
-Version 1.0.0 - **Sean Blakeley** _Created_ _(17 Aug 2018)_
+## **Product Requirements for Ideation App**
 
 
 ## Document Objectives
@@ -120,140 +109,88 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 
 
 ## User Stories
-
-1.  **User Story: **As a user, I need to be able to register for Ideation so I start saving ideas
-
-		**Actions: **Registration will happen on the WordPress site, with a link from within the App
-
-
-		**Task List:**
-
-2.  **User Story: **As a user, I need to add my first and last name on registration, to personalise the app experience
-
-		**Actions: **(Could have) need to be capture via WordPress registration process
-
-
-		**Task List:**
-
-3.  **User Story: **As a user, I need to add my email to the registration process, so I can recover my password (and potentially receive reminder updates in a later iteration)
-
-		**Actions: **Covered by WordPress registration
-
-
-		**Task List:**
-
-4.  **User Story: **As a user, I need to be able to recover my password, so I can resign into my account (or sign in on other devices)
-
-		**Actions: **A link to the 'lost your password?' functionality within WordPress
-
-
-		**Task List:**
-
-5.  **User Story: **As a user, I want to be able to use the app across multiple devices and see my ideas
-
-		**Actions: **The ideas will be stored within WordPress - with each user as the 'author' of each idea. Nothing is stored locally, so once logged in, the user can see their own ideas (from any device)
-
-
-		**Task List:**
-
-6.  **User Story: **As a user, I want a sync button to update my ideas and synchronize across other devices
-
-		**Actions: **This can simply trigger a new API call (to update the content)
-
-
-		**Task List:**
-
-7.  **User Story: **As a user, I need to be able to login to me account so I can access previously stored ideas
-
-		**Actions: **The login process is handled within the App (via JWT) - so the user can use the app to login.
-
-
-		**Task List:**
-
-8.  **User Story: **As a user, I need clear indication of next actions if my login attempt fails
-
-		**Actions: **We can flag a failed attempt within the app screen (we are sent an error code via the API)
-
-
-		**Task List:**
-
-9.  **User Story: **As a user, after I successfully login I want to stay automatically logged into my account whenever I open the app, so I can quickly record ideas
-
-		**Actions: **If a pre-existing (and valid) token is found, the user will be logged in automatically
-
-
-		**Task List:**
-
-10.  **User Story: **As a user, I want a clear indication of now to create an idea so I don't feel lost on first load
-
-		**Actions: **If we don't find any ideas, we display a call-to-action message to create an idea
-
-
-		**Task List:**
-
-11.  **User Story: **As a user, I need to be able to see a list of my ideas and search via text
-
-		**Actions: **The App will use the search component to enable text search against ideas
-
-
-		**Task List:**
-
-12.  **User Story: **As a user, I need to be able to see my pending and overdue reminders for actions so I can follow-up my ideas
-
-		**Actions: **The app will list reminders in date order (the most overdue or soonest at the top)
-
-
-		**Task List:**
-
-13.  **User Story: **As a user, I need to be able to edit pre-existing ideas and save them so I can keep my ideas up-to-date
-
-		**Actions: **Users can select the idea in edit mode and change the details
-
-
-		**Task List:**
-
-14.  **User Story: **As a user I need to be able to dismiss a reminder as no longer relevant and archive it
-
-		**Actions: **This could simply remove the reminder date from WordPress
-
-
-		**Task List:**
-
-15.  **User Story: **As a user, I need to be able to delete ideas and remove them from the list
-
-		**Actions: **The user can select the delete button and are presented with an alert message before confirming deletion
-
-
-		**Task List:**
-
-16.  **User Story: **As a user I need to be able to create an idea and have the option to create a reminder date and reminder text
-
-		**Actions: **The user can create a new idea from the ideas page
-
-
-		**Task List:**
-
-17.  **User Story: **As a user, I need to be able to edit a reminder date and text so I can keep my idea follow-up list up-to-date
-
-		**Actions: **The user can edit all the idea information from the edit page
-
-
-		**Task List:**
-
-18.  **User Story: **As the user, I need a clear message if an API request has failed and the information is unavailable, so I know what action (if any) I can take
-
-		**Actions: **The app will display a simple 'unavailable - please try again' message
-
-
-		**Task List:**
-
-19.  **User Story: **As the client, I need to be able to store idea in a remote database, so future ideas around community, sharing and upselling can be realised
-
-		**Actions: **The ideas will be pushed into WordPress and stored in a started Ideas Custom Post Type
-
-
-		**Task List:**
-
+-----
+* _User Story 01:_ As a user, I need to be able to register for Ideation so I start saving ideas
+* _Actions:_ Registration will happen on the WordPress site, with a link from within the App
+* _Task List:_
+1. _Task 1 details_
+2. _Task 2 details_
+3. _Task 3 details_
+4. _Task 4 details_
+5. _Task 5 details_
+-----
+* _User Story 02:_ As a user, I need to add my first and last name on registration, to personalise the app experience
+* _Actions:_ (Could have) need to be capture via WordPress registration process
+* _Task List:_
+-----
+* _User Story 03:_ As a user, I need to add my email to the registration process, so I can recover my password (and potentially receive reminder updates in a later iteration)
+* _Actions:_ Covered by WordPress registration
+* _Task List:_
+-----
+* _User Story 04:_ As a user, I need to be able to recover my password, so I can resign into my account (or sign in on other devices)
+* _Actions:_ A link to the 'lost your password?' functionality within WordPress
+* _Task List:_
+-----
+* _User Story 05:_ As a user, I want to be able to use the app across multiple devices and see my ideas
+* _Actions:_ The ideas will be stored within WordPress - with each user as the 'author' of each idea. Nothing is stored locally, so once logged in, the user can see their own ideas (from any device)
+* _Task List:_
+-----
+* _User Story 06:_ *As a user, I want a sync button to update my ideas and synchronize across other devices
+* _Actions:_ This can simply trigger a new API call (to update the content)
+* _Task List:_
+-----
+* _User Story 07:_ As a user, I need to be able to login to me account so I can access previously stored ideas
+* _Actions:_ The login process is handled within the App (via JWT) - so the user can use the app to login.
+* _Task List:_
+-----
+* _User Story 08:_ As a user, I need clear indication of next actions if my login attempt fails
+* _Actions:_ We can flag a failed attempt within the app screen (we are sent an error code via the API)
+* _Task List:_
+-----
+* _User Story 09:_ As a user, after I successfully login I want to stay automatically logged into my account whenever I open the app, so I can quickly record ideas
+* _Actions:_ If a pre-existing (and valid) token is found, the user will be logged in automatically
+* _Task List:_
+-----
+* _User Story 10:_ As a user, I want a clear indication of now to create an idea so I don't feel lost on first load
+* _Actions:_ If we don't find any ideas, we display a call-to-action message to create an idea
+* _Task List:_
+-----
+* _User Story 11:_ As a user, I need to be able to see a list of my ideas and search via text
+* _Actions:_ The App will use the search component to enable text search against ideas
+* _Task List:_
+-----
+* _User Story 12:_ As a user, I need to be able to see my pending and overdue reminders for actions so I can follow-up my ideas
+* _Actions:_ The app will list reminders in date order (the most overdue or soonest at the top)
+* _Task List:_
+-----
+* _User Story 13:_ As a user, I need to be able to edit pre-existing ideas and save them so I can keep my ideas up-to-date
+* _Actions:_ Users can select the idea in edit mode and change the details
+* _Task List:_
+-----
+* _User Story 14:_ As a user I need to be able to dismiss a reminder as no longer relevant and archive it
+* _Actions:_ This could simply remove the reminder date from WordPress
+* _Task List:_
+-----
+* _User Story 15:_ As a user, I need to be able to delete ideas and remove them from the list
+* _Actions:_ The user can select the delete button and are presented with an alert message before confirming deletion
+* _Task List:_
+-----
+* _User Story 16:_ As a user I need to be able to create an idea and have the option to create a reminder date and reminder text
+* _Actions:_ The user can create a new idea from the ideas page
+* _Task List:_
+-----
+* _User Story 17:_ As a user, I need to be able to edit a reminder date and text so I can keep my idea follow-up list up-to-date
+* _Actions:_ The user can edit all the idea information from the edit page
+* _Task List:_
+-----
+* _User Story 18:_ As the user, I need a clear message if an API request has failed and the information is unavailable, so I know what action (if any) I can take
+* _Actions:_ The app will display a simple 'unavailable - please try again' message
+* _Task List:_
+-----
+* _User Story 19:_ As the client, I need to be able to store idea in a remote database, so future ideas around community, sharing and upselling can be realised
+* _Actions:_ The ideas will be pushed into WordPress and stored in a started Ideas Custom Post Type
+* _Task List:_
+-----
 
 ## Screen Map
 
@@ -269,75 +206,44 @@ _TBC_
 
 
 ## Risk Register
-
-
-**Risk: **The app fails to get accepted into the App Store
-
-**Impact Level: **High
-
-**Likelihood: **Low
-
-**Mitigation: **We would expect to be provided with a reason why it had been rejected with clear actions required
-
-
-**Risk: **The app fails to find traction in the marketplace
-
-**Impact Level: **High
-
-**Likelihood: **Medium
-
-**Mitigation: **This is an untested idea - the low-cost MVP will test the proposition
-
-
-**Risk: **A competitor releases a similar app
-
-**Impact Level: **Medium
-
-**Likelihood: **Medium
-
-**Mitigation: **We would expect competitors to emerge as the app becomes successful - but rapid iteration would keep us ahead of the competition
-
-
-**Risk: **A pre-existing app adds the Ideation feature set
-
-**Impact Level: **Medium
-
-**Likelihood: **Medium
-
-**Mitigation: **The single purpose focus and clarity of Ideation would provide an advantage over a bolt-on feature to an existing app
-
-
-**Risk: **Performance deteriorates as user increase
-
-**Impact Level: **High
-
-**Likelihood: **High
-
-**Mitigation: **The stack would need to scale with usage
-
-
-**Risk: **Maintenance of two codebases could become challenging over time
-
-**Impact Level: **Low
-
-**Likelihood: **Medium
-
-**Mitigation: **Communications channels need to be clearly established between the client, the agency and app maintenance agency
-
-
-**Risk: **The app costs more than anticipated
-
-**Impact Level: **Medium
-
-**Likelihood: **Low
-
-**Mitigation: **Ever care has been taken to ensure an accurate cost estimate - but it is just an estimate. We would discuss together any required changes in funding level and agree mitigation
-
-
-**Risk: **The app developers misunderstand requirements within the documentation
-
-**Impact Level: **Low
-
-**Likelihood: **Low
-
-**Mitigation: **Time will be provided to discuss and clarify this document
+-----
+* _Risk:_ The app fails to get accepted into the App Store
+* _Impact Level:_ High
+* _Likelihood:_ Low
+* _Mitigation:_ We would expect to be provided with a reason why it had been rejected with clear actions required
+-----
+* _Risk: _ The app fails to find traction in the marketplace
+* _Impact Level:_ High
+* _Likelihood:_ Medium
+* _Mitigation:_ This is an untested idea - the low-cost MVP will test the proposition
+-----
+* _Risk:_ A competitor releases a similar app
+* _Impact Level:_ Medium
+* _Likelihood:_ Medium
+* _Mitigation:_ We would expect competitors to emerge as the app becomes successful - but rapid iteration would keep us ahead of the competition
+-----
+* _Risk:_ A pre-existing app adds the Ideation feature set
+* _Impact Level:_ Medium
+* _Likelihood:_ Medium
+* _Mitigation:_ The single purpose focus and clarity of Ideation would provide an advantage over a bolt-on feature to an existing app
+-----
+* _Risk:_ Performance deteriorates as user increase
+* _Impact Level:_ High
+* _Likelihood:_ High
+* _Mitigation:_ The stack would need to scale with usage
+-----
+* _Risk:_ Maintenance of two codebases could become challenging over time
+* _Impact Level:_ Low
+* _Likelihood:_ Medium
+* _Mitigation:_ Communications channels need to be clearly established between the client, the agency and app maintenance agency
+-----
+* _Risk:_ The app costs more than anticipated
+* _Impact Level:_ Medium
+* _Likelihood:_ Low
+* _Mitigation:_ Ever care has been taken to ensure an accurate cost estimate - but it is just an estimate. We would discuss together any required changes in funding level and agree mitigation
+-----
+* _Risk:_ The app developers misunderstand requirements within the documentation
+* _Impact Level:_ Low
+* _Likelihood:_ Low
+* _Mitigation:_ Time will be provided to discuss and clarify this document
+-----
