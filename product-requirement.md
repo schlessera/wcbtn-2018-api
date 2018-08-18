@@ -202,7 +202,7 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 
 ## Data Structure
 
-### Resource: **token**
+### Resource: **`token`**
 #### Sending credentials to receive token
 **`POST wp-json/jwt-auth/v1/token`**
 
@@ -225,7 +225,7 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 }
 ```
 ---
-### Resource: **ideas**
+### Resource: **`ideas`**
 #### Getting all ideas for a given author
 **`GET /wp-json/wp/v2/ideas?_embed&author=:user_id`**
 
