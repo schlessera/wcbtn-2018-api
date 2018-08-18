@@ -44,7 +44,7 @@ final class IdeaRepository extends CustomPostTypeRepository {
 			'posts_per_page' => $limit,
 			'meta_key'       => ReminderMeta::META_PREFIX . ReminderMeta::DATE,
 			'orderby'        => 'meta_value_num',
-			'order'          => 'DESC',
+			'order'          => 'ASC',
 		];
 	}
 }
