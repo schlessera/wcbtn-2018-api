@@ -178,6 +178,14 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 * _User Story 15:_ As a user, I need to be able to delete ideas and remove them from the list
 * _Actions:_ The user can select the delete button and are presented with an alert message before confirming deletion
 * _Task List:_
+1. You are viewing your list of ideas in the app
+2. Each idea has action buttons next to them
+3. User clicks delete action button
+4. Confirmation window will pop up asking if they are sure they want to delete
+5. They confirm the deletion
+6. Submit a delete request to wordpress with the id of the idea
+7. Response from wordpress confirms the deletion
+8. Idea is removed from the app interface
 -----
 * _User Story 16:_ As a user I need to be able to create an idea and have the option to create a reminder date and reminder text
 * _Actions:_ The user can create a new idea from the ideas page
