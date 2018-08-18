@@ -354,6 +354,8 @@ Fields to be modified and their modified content.
 ##### Response
 (deleted idea data)
 
+---
+
 ## Risk Register
 -----
 * _Risk:_ The app fails to get accepted into the App Store
