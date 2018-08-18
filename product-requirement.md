@@ -224,7 +224,9 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
   "user_id": "2"
 }
 ```
+
 ---
+
 ### Resource: **`ideas`**
 #### Getting all ideas for a given author
 **`GET /wp-json/wp/v2/ideas?_embed&author=:user_id`**
@@ -325,7 +327,9 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
   }
 ]
 ```
+
 ---
+
 #### Modifying a specific idea
 **`PUT /wp-json/wp/v2/ideas/:id`**
 
@@ -341,7 +345,9 @@ Fields to be modified and their modified content.
 ```
 ##### Response
 (modified idea data)
+
 ---
+
 #### Deleting a specific idea
 **`DELETE /wp-json/wp/v2/ideas/:id`**
 
