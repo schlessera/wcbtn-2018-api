@@ -202,8 +202,151 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 
 ## Data Structure
 
-_TBC_
+### Resource: **token**
+#### Sending credentials to receive token
+**POST wp-json/jwt-auth/v1/token**
 
+##### Body
+```json
+{
+  "username": "idea_manager",
+  "password": "password"
+}
+```
+
+##### Response
+```json
+{
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd2NidG4yMDE4LmxvY2FsaG9zdCIsImlhdCI6MTUzNDU0ODI1MCwibmJmIjoxNTM0NTQ4MjUwLCJleHAiOjE1MzUxNTMwNTAsImRhdGEiOnsidXNlciI6eyJpZCI6IjIifX19.K4h39bfmfNyg7lb-_jd8JVTYqzPJceP86k8-zaRZfZU",
+  "user_email": "idea_manager@gmail.com",
+  "user_nicename": "idea_manager",
+  "user_display_name": "Idea Manager",
+  "user_id": "2"
+}
+```
+
+### Resource: **ideas**
+#### Getting all ideas for a given author
+**GET /wp-json/wp/v2/ideas?_embed&author=:user_id**
+
+##### Response
+```json
+[  
+  {  
+    "id": 21,
+    "date": "2018-08-15T10:39:11",
+    "date_gmt": "2018-08-15T10:39:11",
+    "guid": {  
+      "rendered": "https:\/\/wcbtn2018.localhost\/idea\/test-idea\/"
+    },
+    "modified": "2018-08-15T10:39:11",
+    "modified_gmt": "2018-08-15T10:39:11",
+    "slug": "test-idea",
+    "status": "publish",
+    "type": "idea",
+    "link": "https:\/\/wcbtn2018.localhost\/idea\/test-idea\/",
+    "title": {  
+      "rendered": "My first test idea"
+    },
+    "content": {  
+      "rendered": "",
+      "protected": false
+    },
+    "author": 2,
+    "featured_media": 0,
+    "template": "",
+    "meta": [],
+    "reminder_content": "The next action to take",
+    "reminder_date": "1534723200000",
+    "_links": {  
+      "self": [  
+        {  
+          "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/ideas\/21"
+        }
+      ],
+      "collection": [  
+        {  
+          "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/ideas"
+        }
+      ],
+      "about": [  
+        {  
+          "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/types\/idea"
+        }
+      ],
+      "author": [  
+        {  
+          "embeddable": true,
+          "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/users\/2"
+        }
+      ],
+      "wp:attachment": [  
+        {  
+          "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/media?parent=21"
+        }
+      ],
+      "curies": [  
+        {  
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    },
+    "_embedded": {  
+      "author": [  
+        {  
+          "id": 2,
+          "name": "Idea Manager",
+          "url": "",
+          "description": "",
+          "link": "https:\/\/wcbtn2018.localhost\/author\/idea_manager\/",
+          "slug": "idea_manager",
+          "avatar_urls": {  
+            "24": "https:\/\/secure.gravatar.com\/avatar\/47db0b55b9e211cdfa867031f08aba53?s=24&d=mm&r=g",
+            "48": "https:\/\/secure.gravatar.com\/avatar\/47db0b55b9e211cdfa867031f08aba53?s=48&d=mm&r=g",
+            "96": "https:\/\/secure.gravatar.com\/avatar\/47db0b55b9e211cdfa867031f08aba53?s=96&d=mm&r=g"
+          },
+          "_links": {  
+            "self": [  
+              {  
+                "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/users\/2"
+              }
+            ],
+            "collection": [  
+              {  
+                "href": "https:\/\/wcbtn2018.localhost\/wp-json\/wp\/v2\/users"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
+```
+
+#### Modifying a specific idea
+**PUT /wp-json/wp/v2/ideas/:id**
+
+##### Body
+Fields to be modified and their modified content.
+```json
+{
+  "title": "My first test idea",
+  "reminder_content": "The next action to take",
+  "reminder_date": 1534723200000,
+  "status": "publish"
+}
+```
+##### Response
+(modified idea data)
+
+#### Deleting a specific idea
+**DELETE /wp-json/wp/v2/ideas/:id**
+
+##### Repsonse
+(deleted idea data)
 
 ## Risk Register
 -----
