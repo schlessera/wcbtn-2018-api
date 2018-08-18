@@ -184,8 +184,9 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 4. Confirmation window will pop up asking if they are sure they want to delete
 5. They confirm the deletion
 6. Submit a delete request to wordpress with the id of the idea
-7. Response from wordpress confirms the deletion
-8. Idea is removed from the app interface
+7. Wordpress moves idea into trash for 30 days before complete deletion
+8. Response from wordpress confirms the deletion
+9. Idea is removed from the app interface
 -----
 * _User Story 16:_ As a user I need to be able to create an idea and have the option to create a reminder date and reminder text
 * _Actions:_ The user can create a new idea from the ideas page
