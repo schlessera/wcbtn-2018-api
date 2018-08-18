@@ -345,7 +345,7 @@ Fields to be modified and their modified content.
 #### Deleting a specific idea
 **`DELETE /wp-json/wp/v2/ideas/:id`**
 
-##### Repsonse
+##### Response
 (deleted idea data)
 
 ## Risk Register
