@@ -113,11 +113,15 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 * _User Story 01:_ As a user, I need to be able to register for Ideation so I start saving ideas
 * _Actions:_ Registration will happen on the WordPress site, with a link from within the App
 * _Task List:_
-1. _Task 1 details_
-2. _Task 2 details_
-3. _Task 3 details_
-4. _Task 4 details_
-5. _Task 5 details_
+1. Open app
+2. Click register link
+3. Fill in their email and password
+4. Click register
+5. Receive email confirmation
+6. Click confirmation link in email
+7. Redirected back to wordpress
+8. Account is confirmed
+9. User is redirected to the app
 -----
 * _User Story 02:_ As a user, I need to add my first and last name on registration, to personalise the app experience
 * _Actions:_ (Could have) need to be capture via WordPress registration process
