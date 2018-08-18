@@ -204,7 +204,7 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 
 ### Resource: **token**
 #### Sending credentials to receive token
-**POST wp-json/jwt-auth/v1/token**
+**`POST wp-json/jwt-auth/v1/token`**
 
 ##### Body
 ```json
@@ -227,7 +227,7 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 
 ### Resource: **ideas**
 #### Getting all ideas for a given author
-**GET /wp-json/wp/v2/ideas?_embed&author=:user_id**
+**`GET /wp-json/wp/v2/ideas?_embed&author=:user_id`**
 
 ##### Response
 ```json
@@ -327,7 +327,7 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 ```
 
 #### Modifying a specific idea
-**PUT /wp-json/wp/v2/ideas/:id**
+**`PUT /wp-json/wp/v2/ideas/:id`**
 
 ##### Body
 Fields to be modified and their modified content.
@@ -343,7 +343,7 @@ Fields to be modified and their modified content.
 (modified idea data)
 
 #### Deleting a specific idea
-**DELETE /wp-json/wp/v2/ideas/:id**
+**`DELETE /wp-json/wp/v2/ideas/:id`**
 
 ##### Repsonse
 (deleted idea data)
