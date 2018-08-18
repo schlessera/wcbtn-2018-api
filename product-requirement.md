@@ -130,6 +130,19 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 * _User Story 04:_ As a user, I need to be able to recover my password, so I can resign into my account (or sign in on other devices)
 * _Actions:_ A link to the 'lost your password?' functionality within WordPress
 * _Task List:_
+
+Create 'lost password' section within app;
+When the lost password process is invoked:
+- Connect to WP to generate and store a transient (5 minutes) with 6 digit code against user profile;
+- email 6 digit code to user;
+User opens email; enters code in the app (having looked this up from the email);
+Subject to code being validated, user is asked to enter a new password;
+- If code is not valid, or time has expired, present an error message;
+If password does not meet requirements, present a message to try again;
+Once password meets requirements; hash and create a callback to the WP site to update the user password;
+Return to login screen, with confirmation that the password was updated;
+User can now login :)
+
 -----
 * _User Story 05:_ As a user, I want to be able to use the app across multiple devices and see my ideas
 * _Actions:_ The ideas will be stored within WordPress - with each user as the 'author' of each idea. Nothing is stored locally, so once logged in, the user can see their own ideas (from any device)
