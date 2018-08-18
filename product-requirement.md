@@ -113,11 +113,15 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 * _User Story 01:_ As a user, I need to be able to register for Ideation so I start saving ideas
 * _Actions:_ Registration will happen on the WordPress site, with a link from within the App
 * _Task List:_
-1. _Task 1 details_
-2. _Task 2 details_
-3. _Task 3 details_
-4. _Task 4 details_
-5. _Task 5 details_
+1. Open app
+2. Click register link
+3. Fill in their email and password
+4. Click register
+5. Receive email confirmation
+6. Click confirmation link in email
+7. Redirected back to wordpress
+8. Account is confirmed
+9. User is redirected to the app
 -----
 * _User Story 02:_ As a user, I need to add my first and last name on registration, to personalise the app experience
 * _Actions:_ (Could have) need to be capture via WordPress registration process
@@ -174,6 +178,15 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 * _User Story 15:_ As a user, I need to be able to delete ideas and remove them from the list
 * _Actions:_ The user can select the delete button and are presented with an alert message before confirming deletion
 * _Task List:_
+1. You are viewing your list of ideas in the app
+2. Each idea has action buttons next to them
+3. User clicks delete action button
+4. Confirmation window will pop up asking if they are sure they want to delete
+5. They confirm the deletion
+6. Submit a delete request to wordpress with the id of the idea
+7. Wordpress moves idea into trash for 30 days before complete deletion
+8. Response from wordpress confirms the deletion
+9. Idea is removed from the app interface
 -----
 * _User Story 16:_ As a user I need to be able to create an idea and have the option to create a reminder date and reminder text
 * _Actions:_ The user can create a new idea from the ideas page
