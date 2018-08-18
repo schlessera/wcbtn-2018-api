@@ -154,6 +154,10 @@ Users can create a new ideas which map to an ideas CPT within WordPress.
 * _User Story 10:_ As a user, I want a clear indication of now to create an idea so I don't feel lost on first load
 * _Actions:_ If we don't find any ideas, we display a call-to-action message to create an idea
 * _Task List:_
+
+Present a "welcome to the app" message; possibly include link to tutorial;
+Present "you haven't created any ideas - create one?" link / function.
+
 -----
 * _User Story 11:_ As a user, I need to be able to see a list of my ideas and search via text
 * _Actions:_ The App will use the search component to enable text search against ideas
